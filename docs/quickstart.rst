@@ -248,6 +248,10 @@ mathparse only recognizes mathematical operations, making it safe for user input
     mathparse.parse('open("file")')    # ❌ Raises exception
     mathparse.parse('print("hello")')  # ❌ Raises exception
 
+.. note::
+   For comprehensive security documentation, best practices, and detailed information
+   about mathparse's security architecture, see :doc:`security`.
+
 Handling Errors
 ---------------
 

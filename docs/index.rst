@@ -23,6 +23,7 @@ Mathparse Documentation
    utils
    advanced
    postfix
+   security
 
 Indices and tables
 ==================

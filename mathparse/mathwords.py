@@ -1668,8 +1668,8 @@ LANGUAGE_CODES = list(MATH_WORDS.keys())
 
 
 CONSTANTS = {
-    'pi': 3.141693,
-    'π': 3.141693,
+    'pi': 3.141593,
+    'π': 3.141593,
     'e': 2.718281
 }
 
