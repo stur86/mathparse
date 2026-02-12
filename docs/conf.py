@@ -27,15 +27,19 @@ from mathparse import __version__ as mathparse_version  # noqa: E402
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.apidoc',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
+    'sphinx.ext.autosummary',
     'sphinx.ext.coverage',
+    'sphinx.ext.doctest',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.inheritance_diagram',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.viewcode',
+
     'github',
     'canonical',
 ]
@@ -125,9 +129,6 @@ html_show_sourcelink = True
 html_baseurl = 'https://mathparse.chatterbot.us/'
 
 html_context = {
-    'extra_css_files': [
-        '_static/style.css'
-    ],
     'meta': {
         'description': project_description,
         'keywords': (
@@ -151,7 +152,8 @@ html_css_files = [
 ]
 
 html_js_files = [
-    'silktide-consent-manager.js'
+    'silktide-consent-manager.js',
+    'mobile.js',
 ]
 
 # Custom sidebar templates, must be a dictionary that maps document names
