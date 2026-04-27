@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import math
 from unittest import TestCase
 from mathparse import mathparse
 
@@ -145,22 +146,49 @@ class UnaryWordOperatorTestCase(TestCase):
 
         self.assertEqual(result, 4.0)
 
+    _LN_OF_100 = math.log(100)
+
     def test_ln_symbolic(self):
         result = mathparse.parse('ln 100')
 
-        self.assertEqual(result, 4.605170185988092)
+        self.assertEqual(result, self._LN_OF_100)
 
     def test_ln_symbolic_with_parenthesis(self):
         result = mathparse.parse('ln(100)')
 
-        self.assertEqual(result, 4.605170185988092)
+        self.assertEqual(result, self._LN_OF_100)
 
     def test_ln_english(self):
         result = mathparse.parse('natural logarithm of 100', language='ENG')
 
-        self.assertEqual(result, 4.605170185988092)
+        self.assertEqual(result, self._LN_OF_100)
 
     def test_ln_of_english(self):
         result = mathparse.parse('ln of 100', language='ENG')
 
-        self.assertEqual(result, 4.605170185988092)
+        self.assertEqual(result, self._LN_OF_100)
+
+    def test_ln_dutch(self):
+        result = mathparse.parse('natuurlijk logaritme van 100', language='DUT')
+
+        self.assertEqual(result, self._LN_OF_100)
+
+    def test_ln_dutch_variant(self):
+        result = mathparse.parse('neperian logaritme van 100', language='DUT')
+
+        self.assertEqual(result, self._LN_OF_100)
+
+    def test_ln_dutch_short(self):
+        result = mathparse.parse('ln van 100', language='DUT')
+
+        self.assertEqual(result, self._LN_OF_100)
+
+    def test_ln_french(self):
+        result = mathparse.parse('logarithme naturel de 100', language='FRE')
+
+        self.assertEqual(result, self._LN_OF_100)
+
+    def test_ln_french_variant(self):
+        result = mathparse.parse('logarithme népérien de 100', language='FRE')
+
+        self.assertEqual(result, self._LN_OF_100)

@@ -14,7 +14,10 @@ MATH_WORDS = {
         'prefix_unary_operators': {
             'vierkantswortel van': 'sqrt',
             'wortel van': 'sqrt',
-            'logaritme van': 'log'
+            'logaritme van': 'log',
+            'natuurlijk logaritme van': 'ln',
+            'neperian logaritme van': 'ln',
+            'ln van': 'ln',
         },
         'postfix_unary_operators': {
             'kwadraat': '^ 2'
@@ -128,7 +131,9 @@ MATH_WORDS = {
     'FRE': {
         'prefix_unary_operators': {
             'racine carrée de': 'sqrt',
-            'logarithme de': 'log'
+            'logarithme de': 'log',
+            'logarithme naturel de': 'ln',
+            'logarithme népérien de': 'ln'
         },
         'postfix_unary_operators': {
             'au carré': '^ 2',
