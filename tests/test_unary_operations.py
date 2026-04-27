@@ -144,3 +144,23 @@ class UnaryWordOperatorTestCase(TestCase):
         result = mathparse.parse('(log 100) ^ 2')
 
         self.assertEqual(result, 4.0)
+
+    def test_ln_symbolic(self):
+        result = mathparse.parse('ln 100')
+
+        self.assertEqual(result, 4.605170185988092)
+
+    def test_ln_symbolic_with_parenthesis(self):
+        result = mathparse.parse('ln(100)')
+
+        self.assertEqual(result, 4.605170185988092)
+
+    def test_ln_english(self):
+        result = mathparse.parse('natural logarithm of 100', language='ENG')
+
+        self.assertEqual(result, 4.605170185988092)
+
+    def test_ln_of_english(self):
+        result = mathparse.parse('ln of 100', language='ENG')
+
+        self.assertEqual(result, 4.605170185988092)

@@ -71,7 +71,9 @@ MATH_WORDS = {
             'square root of': 'sqrt',
             'negative': 'neg',
             'logarithm of': 'log',
-            'log of': 'log'
+            'log of': 'log',
+            'natural logarithm of': 'ln',
+            'ln of': 'ln'
         },
         'postfix_unary_operators': {
             'squared': '^ 2',
@@ -1679,6 +1681,9 @@ UNARY_FUNCTIONS = {
 
     # Most people assume a log of base 10 when a base is not specified
     'log': math.log10,
+
+    # Natural logarithm
+    'ln': math.log,
 
     # Unary minus function for negative numbers
     'neg': lambda x: -x

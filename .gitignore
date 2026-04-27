@@ -71,3 +71,6 @@ ENV/
 
 #IDEA settings
 .idea/
+
+# Lockfile when using uv
+uv.lock
